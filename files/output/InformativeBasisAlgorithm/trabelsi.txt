@@ -1,0 +1,128 @@
+== Diadic decomposition  ==
+Context name : trabelsi_t4
+Objects : {u1, u2, u3, u4, u5, u6, u7}
+Attributes : {r1, r2, r3}
+X   X   X
+X   X   X
+X   X   X
+0   X   X
+X   X   X
+X   X   0
+X   X   X
+
+Biedermann Rules for context trabelsi_t4:
+({r3} -> {r2})t4 [Support = 85.7%]
+({r1} -> {r2})t4 [Support = 85.7%]
+({r1, r3} -> {r2})t4 [Support = 71.4%]
+
+Context name : trabelsi_t5
+Objects : {u1, u2, u3, u4, u5, u6, u7}
+Attributes : {r1, r2, r3}
+0   0   0
+0   0   0
+0   0   0
+0   0   0
+X   X   0
+X   X   0
+X   X   X
+
+Biedermann Rules for context trabelsi_t5:
+({r1} -> {r2})t5 [Support = 42.9%]
+({r2} -> {r1})t5 [Support = 42.9%]
+({r3} -> {r1, r2})t5 [Support = 14.3%]
+
+Context name : trabelsi_t1
+Objects : {u1, u2, u3, u4, u5, u6, u7}
+Attributes : {r1, r2, r3}
+0   0   0
+0   X   X
+0   X   X
+0   X   X
+0   0   0
+0   0   0
+X   X   X
+
+Biedermann Rules for context trabelsi_t1:
+({r2} -> {r3})t1 [Support = 57.1%]
+({r3} -> {r2})t1 [Support = 57.1%]
+({r1} -> {r2, r3})t1 [Support = 14.3%]
+
+Context name : trabelsi_t2
+Objects : {u1, u2, u3, u4, u5, u6, u7}
+Attributes : {r1, r2, r3}
+X   X   X
+X   X   X
+X   X   X
+0   0   0
+X   X   X
+0   0   0
+X   X   X
+
+Biedermann Rules for context trabelsi_t2:
+({r1} -> {r2, r3})t2 [Support = 71.4%]
+({r2} -> {r1, r3})t2 [Support = 71.4%]
+({r3} -> {r1, r2})t2 [Support = 71.4%]
+
+Context name : trabelsi_t3
+Objects : {u1, u2, u3, u4, u5, u6, u7}
+Attributes : {r1, r2, r3}
+X   X   X
+X   X   X
+X   X   X
+0   0   0
+X   X   X
+0   0   0
+X   X   X
+
+Biedermann Rules for context trabelsi_t3:
+({r1} -> {r2, r3})t3 [Support = 71.4%]
+({r2} -> {r1, r3})t3 [Support = 71.4%]
+({r3} -> {r1, r2})t3 [Support = 71.4%]
+
+==== BUCKETS ======
+Bucket r3
+ Rules:
+({r3} -> {r2})t4 [Support = 85.7%]
+({r3} -> {r1, r2})t5 [Support = 14.3%]
+({r3} -> {r2})t1 [Support = 57.1%]
+({r3} -> {r1, r2})t2 [Support = 71.4%]
+({r3} -> {r1, r2})t3 [Support = 71.4%]
+
+Bucket r1
+ Rules:
+({r1} -> {r2})t4 [Support = 85.7%]
+({r1} -> {r2})t5 [Support = 42.9%]
+({r1} -> {r2, r3})t1 [Support = 14.3%]
+({r1} -> {r2, r3})t2 [Support = 71.4%]
+({r1} -> {r2, r3})t3 [Support = 71.4%]
+
+Bucket r1r3
+ Rules:
+({r1, r3} -> {r2})t4 [Support = 71.4%]
+
+Bucket r2
+ Rules:
+({r2} -> {r1})t5 [Support = 42.9%]
+({r2} -> {r3})t1 [Support = 57.1%]
+({r2} -> {r1, r3})t2 [Support = 71.4%]
+({r2} -> {r1, r3})t3 [Support = 71.4%]
+
+==== CAI ======
+Bucket r3
+ Rules:
+{r3}-(t4t5t1t2t3)>{r2} [Support = 14.3%]
+{r3}-(t5t2t3)>{r1} [Support = 14.3%]
+
+Bucket r1
+ Rules:
+{r1}-(t1t2t3)>{r3} [Support = 14.3%]
+{r1}-(t4t5t1t2t3)>{r2} [Support = 14.3%]
+
+Bucket r1r3
+ Rules:
+{r1, r3}-(t4)>{r2} [Support = 71.4%]
+
+Bucket r2
+ Rules:
+{r2}-(t1t2t3)>{r3} [Support = 57.1%]
+{r2}-(t5t2t3)>{r1} [Support = 42.9%]

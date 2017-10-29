@@ -2958,6 +2958,10 @@ public class ContextViewer extends Viewer {
 		// Generate Lattice for this context
 		ConceptLattice conceptLattice = new ConceptLattice(binaryContext);
 		Vector<BasicSet> gen = getGenerateursInfimum(conceptLattice);
+
+
+		// TODO: Utiliser genInfimumKKc plutot...
+
 		Vector<BasicSet> elementsCandidates = getCandidates(conceptLattice, gen);
 
 		Vector<Rule> rules = new Vector<>();
@@ -2965,7 +2969,33 @@ public class ContextViewer extends Viewer {
 			rules.addAll(computeImplicationsWithNegation(binaryContext, elementsCandidate));
 		}
 
-		new RuleViewer(rules, binaryContext.getName(), 0.0, 1.0, null);
+
+		double minSupp = askMinSupport();
+
+		new RuleViewer(rules, binaryContext.getName(), minSupp / 100.0, 1.0, null);
+	}
+
+	/**
+	 * Generation of the keys for the lattice of context K|K~
+	 *
+	 * Kevin Emamirad
+	 *
+	 * @param context K
+	 * @return
+	 */
+	private Vector<BasicSet> genInfimumKKc(BinaryContext context) {
+		Vector<String> objTraites = new Vector<>();
+		Vector<BasicSet> intentCoAtoms = new Vector<>();
+
+		Vector<String> contextObjects = context.getObjects();
+
+		while (!objTraites.containsAll(contextObjects)) {
+
+			
+
+
+		}
+		return null;
 	}
 
 	/**

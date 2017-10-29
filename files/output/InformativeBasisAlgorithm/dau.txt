@@ -1,0 +1,182 @@
+== Diadic decomposition  ==
+Context name : dau_DD
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+0   0   0
+0   0   0
+X   X   0
+X   0   X
+X   0   0
+0   0   0
+X   0   0
+0   X   0
+X   0   0
+
+Biedermann Rules for context dau_DD:
+({mayApprove} -> {mayOpen})DD [Support = 11.1%]
+({mayApprove, mayWrite} -> {mayOpen})DD [Support = 0.0%]
+
+Context name : dau_RE
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+X   0   0
+X   X   0
+X   0   0
+X   0   0
+X   0   0
+X   0   0
+X   0   0
+0   0   0
+X   0   0
+
+Biedermann Rules for context dau_RE:
+({mayWrite} -> {mayOpen})RE [Support = 11.1%]
+({mayApprove} -> {mayOpen, mayWrite})RE [Support = 0.0%]
+
+Context name : dau_CCD
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+0   0   0
+X   0   X
+0   0   0
+X   0   X
+X   X   0
+0   0   0
+0   0   0
+X   0   0
+X   X   0
+
+Biedermann Rules for context dau_CCD:
+({mayWrite} -> {mayOpen})CCD [Support = 22.2%]
+({mayApprove} -> {mayOpen})CCD [Support = 22.2%]
+({mayApprove, mayWrite} -> {mayOpen})CCD [Support = 0.0%]
+
+Context name : dau_MD
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+X   0   0
+X   0   0
+X   0   X
+X   0   X
+X   0   0
+X   0   0
+X   X   0
+0   0   0
+X   0   0
+
+Biedermann Rules for context dau_MD:
+({mayWrite} -> {mayOpen})MD [Support = 11.1%]
+({mayApprove} -> {mayOpen})MD [Support = 22.2%]
+({mayApprove, mayWrite} -> {mayOpen})MD [Support = 0.0%]
+
+Context name : dau_UM
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+0   0   0
+X   0   0
+X   X   0
+X   0   X
+X   0   0
+X   0   0
+X   0   0
+0   X   0
+X   0   0
+
+Biedermann Rules for context dau_UM:
+({mayApprove} -> {mayOpen})UM [Support = 11.1%]
+({mayApprove, mayWrite} -> {mayOpen})UM [Support = 0.0%]
+
+Context name : dau_ETID
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+0   0   0
+X   0   0
+X   X   0
+X   0   X
+X   0   0
+X   0   0
+X   0   0
+0   X   0
+X   0   0
+
+Biedermann Rules for context dau_ETID:
+({mayApprove} -> {mayOpen})ETID [Support = 11.1%]
+({mayApprove, mayWrite} -> {mayOpen})ETID [Support = 0.0%]
+
+Context name : dau_ToUD
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+X   0   0
+X   0   X
+X   0   0
+X   0   X
+X   X   0
+X   0   0
+X   0   0
+0   0   0
+X   0   0
+
+Biedermann Rules for context dau_ToUD:
+({mayWrite} -> {mayOpen})ToUD [Support = 11.1%]
+({mayApprove} -> {mayOpen})ToUD [Support = 22.2%]
+({mayApprove, mayWrite} -> {mayOpen})ToUD [Support = 0.0%]
+
+Context name : dau_IG
+Objects : {CSE, LDE, ME, MV, SC, SDE, SP, SV, TE}
+Attributes : {mayApprove, mayOpen, mayWrite}
+0   0   0
+0   0   0
+X   X   0
+X   0   X
+X   0   0
+X   0   0
+X   0   0
+0   X   0
+X   0   0
+
+Biedermann Rules for context dau_IG:
+({mayApprove} -> {mayOpen})IG [Support = 11.1%]
+({mayApprove, mayWrite} -> {mayOpen})IG [Support = 0.0%]
+
+==== BUCKETS ======
+Bucket mayApprove
+ Rules:
+({mayApprove} -> {mayOpen})DD [Support = 11.1%]
+({mayApprove} -> {mayOpen, mayWrite})RE [Support = 0.0%]
+({mayApprove} -> {mayOpen})CCD [Support = 22.2%]
+({mayApprove} -> {mayOpen})MD [Support = 22.2%]
+({mayApprove} -> {mayOpen})UM [Support = 11.1%]
+({mayApprove} -> {mayOpen})ETID [Support = 11.1%]
+({mayApprove} -> {mayOpen})ToUD [Support = 22.2%]
+({mayApprove} -> {mayOpen})IG [Support = 11.1%]
+
+Bucket mayApprovemayWrite
+ Rules:
+({mayApprove, mayWrite} -> {mayOpen})DD [Support = 0.0%]
+({mayApprove, mayWrite} -> {mayOpen})CCD [Support = 0.0%]
+({mayApprove, mayWrite} -> {mayOpen})MD [Support = 0.0%]
+({mayApprove, mayWrite} -> {mayOpen})UM [Support = 0.0%]
+({mayApprove, mayWrite} -> {mayOpen})ETID [Support = 0.0%]
+({mayApprove, mayWrite} -> {mayOpen})ToUD [Support = 0.0%]
+({mayApprove, mayWrite} -> {mayOpen})IG [Support = 0.0%]
+
+Bucket mayWrite
+ Rules:
+({mayWrite} -> {mayOpen})RE [Support = 11.1%]
+({mayWrite} -> {mayOpen})CCD [Support = 22.2%]
+({mayWrite} -> {mayOpen})MD [Support = 11.1%]
+({mayWrite} -> {mayOpen})ToUD [Support = 11.1%]
+
+==== CAI ======
+Bucket mayApprove
+ Rules:
+{mayApprove}-(RE)>{mayWrite} [Support = 0.0%]
+{mayApprove}-(DDRECCDMDUMETIDToUDIG)>{mayOpen} [Support = 0.0%]
+
+Bucket mayApprovemayWrite
+ Rules:
+{mayApprove, mayWrite}-(DDCCDMDUMETIDToUDIG)>{mayOpen} [Support = 0.0%]
+
+Bucket mayWrite
+ Rules:
+{mayWrite}-(RECCDMDToUD)>{mayOpen} [Support = 11.1%]

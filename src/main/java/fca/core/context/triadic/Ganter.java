@@ -38,14 +38,17 @@ public class Ganter {
 	public String showRules() {
 		StringBuilder rules = new StringBuilder();
 		// Contexts with Conditions.
-		rules.append("== Biedermann's implications  ==\n"); // Diadic decomposition
+		rules.append("== Diadic decomposition  ==\n");
 		// key is the condition, value is the binary context for that condition.
 		Map<String, BinaryContext> contextsWithCondition = generateDiadicsFromTriadics();
 
 		for (Map.Entry<String, BinaryContext> binaryContextEntry : contextsWithCondition.entrySet()) {
 			BinaryContext bc = binaryContextEntry.getValue();
 			String condition = binaryContextEntry.getKey();
+			rules.append(bc);
+			rules.append("\n");
 
+			rules.append("Biedermann Rules for context ").append(bc.getName()).append(": ").append("\n");
 			List<TriadicRule> biRules = getBinaryRulesAndGenerateBuckets(condition, bc);
 			for (TriadicRule biRule : biRules) {
 				String label = getBucketLabel(biRule.getAntecedant());
@@ -60,20 +63,21 @@ public class Ganter {
 				rules.append(biRule);
 				rules.append("\n");
 			}
+			rules.append("\n");
 		}
 
 
-		// Buckets
+		rules.append("==== BUCKETS ======\n");
 		for (Bucket bucket : buckets) {
-			rules.append(bucket);
+			rules.append(bucket).append("\n");
 		}
 
-		rules.append("\n==== CAIs ======\n");
+		rules.append("==== CAI ======\n");
 		for (Bucket bucket : buckets) {
 			bucket.decomposeRuleConsequence();
 			bucket.toCAIs(contextsWithCondition);
 			bucket.removeDuplicateRulesFromBucket();
-			rules.append(bucket);
+			rules.append(bucket).append("\n");
 		}
 		return rules.toString();
 	}

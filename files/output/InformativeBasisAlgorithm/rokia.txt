@@ -1,0 +1,998 @@
+== Diadic decomposition  ==
+Context name : rokia_u
+Objects : {1, 2, 3, 4, 5, 6, 7}
+Attributes : {A, B, C, D, E, F, G, H, I}
+0   0   X   0   X   X   0   0   0
+0   X   X   X   X   0   0   0   X
+X   0   0   0   X   0   X   0   0
+X   X   X   X   X   0   0   X   0
+0   0   X   0   X   0   X   0   0
+X   X   0   0   0   0   0   X   0
+0   0   0   0   0   0   0   0   X
+
+Biedermann Rules for context rokia_u:
+({C} -> {E})u [Support = 57.1%]
+({G} -> {E})u [Support = 28.6%]
+({D} -> {B, C, E})u [Support = 28.6%]
+({B, C} -> {D, E})u [Support = 28.6%]
+({B, E} -> {C, D})u [Support = 28.6%]
+({H} -> {A, B})u [Support = 28.6%]
+({A, B} -> {H})u [Support = 28.6%]
+({B, I} -> {C, D, E})u [Support = 14.3%]
+({C, I} -> {B, D, E})u [Support = 14.3%]
+({D, I} -> {B, C, E})u [Support = 14.3%]
+({E, I} -> {B, C, D})u [Support = 14.3%]
+({F} -> {C, E})u [Support = 14.3%]
+({C, G} -> {E})u [Support = 14.3%]
+({A, G} -> {E})u [Support = 14.3%]
+({A, C} -> {B, D, E, H})u [Support = 14.3%]
+({A, D} -> {B, C, E, H})u [Support = 14.3%]
+({C, H} -> {A, B, D, E})u [Support = 14.3%]
+({D, H} -> {A, B, C, E})u [Support = 14.3%]
+({E, H} -> {A, B, C, D})u [Support = 14.3%]
+({A, B, E} -> {C, D, H})u [Support = 14.3%]
+({B, F} -> {A, C, D, E, G, H, I})u [Support = 0.0%]
+({D, F} -> {A, B, C, E, G, H, I})u [Support = 0.0%]
+({F, I} -> {A, B, C, D, E, G, H})u [Support = 0.0%]
+({B, G} -> {A, C, D, E, F, H, I})u [Support = 0.0%]
+({D, G} -> {A, B, C, E, F, H, I})u [Support = 0.0%]
+({F, G} -> {A, B, C, D, E, H, I})u [Support = 0.0%]
+({G, I} -> {A, B, C, D, E, F, H})u [Support = 0.0%]
+({A, F} -> {B, C, D, E, G, H, I})u [Support = 0.0%]
+({A, I} -> {B, C, D, E, F, G, H})u [Support = 0.0%]
+({F, H} -> {A, B, C, D, E, G, I})u [Support = 0.0%]
+({G, H} -> {A, B, C, D, E, F, I})u [Support = 0.0%]
+({H, I} -> {A, B, C, D, E, F, G})u [Support = 0.0%]
+({A, C, G} -> {B, D, E, F, H, I})u [Support = 0.0%]
+
+Context name : rokia_v
+Objects : {1, 2, 3, 4, 5, 6, 7}
+Attributes : {A, B, C, D, E, F, G, H, I}
+0   X   0   0   X   0   X   0   X
+0   0   0   0   X   0   X   0   0
+X   0   0   X   0   0   0   0   X
+X   X   X   0   0   0   X   0   0
+0   0   0   0   0   X   0   0   0
+X   X   0   X   0   0   0   X   X
+X   0   0   0   0   0   0   0   0
+
+Biedermann Rules for context rokia_v:
+({E} -> {G})v [Support = 28.6%]
+({D} -> {A, I})v [Support = 28.6%]
+({A, I} -> {D})v [Support = 28.6%]
+({B, F} -> {A, C, D, E, G, H, I})v [Support = 0.0%]
+({E, F} -> {A, B, C, D, G, H, I})v [Support = 0.0%]
+({F, G} -> {A, B, C, D, E, H, I})v [Support = 0.0%]
+({F, I} -> {A, B, C, D, E, G, H})v [Support = 0.0%]
+({A, E} -> {B, C, D, F, G, H, I})v [Support = 0.0%]
+({A, F} -> {B, C, D, E, G, H, I})v [Support = 0.0%]
+({C, E} -> {A, B, D, F, G, H, I})v [Support = 0.0%]
+({C, F} -> {A, B, D, E, G, H, I})v [Support = 0.0%]
+({C, I} -> {A, B, D, E, F, G, H})v [Support = 0.0%]
+({C, D} -> {A, B, E, F, G, H, I})v [Support = 0.0%]
+({D, E} -> {A, B, C, F, G, H, I})v [Support = 0.0%]
+({D, F} -> {A, B, C, E, G, H, I})v [Support = 0.0%]
+({D, G} -> {A, B, C, E, F, H, I})v [Support = 0.0%]
+({C, H} -> {A, B, D, E, F, G, I})v [Support = 0.0%]
+({E, H} -> {A, B, C, D, F, G, I})v [Support = 0.0%]
+({F, H} -> {A, B, C, D, E, G, I})v [Support = 0.0%]
+({G, H} -> {A, B, C, D, E, F, I})v [Support = 0.0%]
+({A, G, I} -> {B, C, D, E, F, H})v [Support = 0.0%]
+({B, E} -> {G, I})v [Support = 14.3%]
+({E, I} -> {B, G})v [Support = 14.3%]
+({G, I} -> {B, E})v [Support = 14.3%]
+({C} -> {A, B, G})v [Support = 14.3%]
+({A, G} -> {B, C})v [Support = 14.3%]
+({H} -> {A, B, D, I})v [Support = 14.3%]
+({B, D} -> {A, H, I})v [Support = 14.3%]
+({A, B, I} -> {D, H})v [Support = 14.3%]
+
+Context name : rokia_x
+Objects : {1, 2, 3, 4, 5, 6, 7}
+Attributes : {A, B, C, D, E, F, G, H, I}
+X   0   X   X   0   X   X   X   0
+X   X   0   X   X   0   X   X   0
+X   0   X   0   0   0   0   0   0
+X   0   0   X   0   X   0   X   0
+0   X   0   0   X   0   0   0   X
+0   0   0   0   0   X   0   0   0
+0   X   X   X   0   0   X   0   0
+
+Biedermann Rules for context rokia_x:
+({H} -> {A, D})x [Support = 42.9%]
+({A, D} -> {H})x [Support = 42.9%]
+({G} -> {D})x [Support = 42.9%]
+({C, D} -> {G})x [Support = 28.6%]
+({C, G} -> {D})x [Support = 28.6%]
+({A, F} -> {D, H})x [Support = 28.6%]
+({D, F} -> {A, H})x [Support = 28.6%]
+({F, H} -> {A, D})x [Support = 28.6%]
+({E} -> {B})x [Support = 28.6%]
+({B, D} -> {G})x [Support = 28.6%]
+({B, G} -> {D})x [Support = 28.6%]
+({A, G} -> {D, H})x [Support = 28.6%]
+({G, H} -> {A, D})x [Support = 28.6%]
+({C, F} -> {A, D, G, H})x [Support = 14.3%]
+({F, G} -> {A, C, D, H})x [Support = 14.3%]
+({C, H} -> {A, D, F, G})x [Support = 14.3%]
+({A, C, D} -> {F, G, H})x [Support = 14.3%]
+({A, C, G} -> {D, F, H})x [Support = 14.3%]
+({B, C} -> {D, G})x [Support = 14.3%]
+({D, E} -> {A, B, G, H})x [Support = 14.3%]
+({E, G} -> {A, B, D, H})x [Support = 14.3%]
+({A, B} -> {D, E, G, H})x [Support = 14.3%]
+({A, E} -> {B, D, G, H})x [Support = 14.3%]
+({B, H} -> {A, D, E, G})x [Support = 14.3%]
+({E, H} -> {A, B, D, G})x [Support = 14.3%]
+({I} -> {B, E})x [Support = 14.3%]
+({B, F} -> {A, C, D, E, G, H, I})x [Support = 0.0%]
+({C, E} -> {A, B, D, F, G, H, I})x [Support = 0.0%]
+({E, F} -> {A, B, C, D, G, H, I})x [Support = 0.0%]
+({A, B, C} -> {D, E, F, G, H, I})x [Support = 0.0%]
+({B, C, H} -> {A, D, E, F, G, I})x [Support = 0.0%]
+({A, I} -> {B, C, D, E, F, G, H})x [Support = 0.0%]
+({C, I} -> {A, B, D, E, F, G, H})x [Support = 0.0%]
+({D, I} -> {A, B, C, E, F, G, H})x [Support = 0.0%]
+({F, I} -> {A, B, C, D, E, G, H})x [Support = 0.0%]
+({G, I} -> {A, B, C, D, E, F, H})x [Support = 0.0%]
+({H, I} -> {A, B, C, D, E, F, G})x [Support = 0.0%]
+
+Context name : rokia_y
+Objects : {1, 2, 3, 4, 5, 6, 7}
+Attributes : {A, B, C, D, E, F, G, H, I}
+X   0   0   X   0   0   0   X   X
+X   0   0   X   0   X   0   X   X
+0   X   0   0   0   0   0   X   0
+0   0   0   0   0   X   0   0   X
+X   0   X   X   0   0   0   0   0
+0   0   X   0   0   0   0   0   X
+0   0   X   X   X   X   0   X   0
+
+Biedermann Rules for context rokia_y:
+({B} -> {H})y [Support = 14.3%]
+({D, I} -> {A, H})y [Support = 28.6%]
+({H, I} -> {A, D})y [Support = 28.6%]
+({A, H} -> {D, I})y [Support = 28.6%]
+({A, I} -> {D, H})y [Support = 28.6%]
+({A} -> {D})y [Support = 42.9%]
+({D, F} -> {H})y [Support = 28.6%]
+({F, H} -> {D})y [Support = 28.6%]
+({G} -> {A, B, C, D, E, F, H, I})y [Support = 0.0%]
+({B, C} -> {A, D, E, F, G, H, I})y [Support = 0.0%]
+({B, I} -> {A, C, D, E, F, G, H})y [Support = 0.0%]
+({A, B} -> {C, D, E, F, G, H, I})y [Support = 0.0%]
+({B, D} -> {A, C, E, F, G, H, I})y [Support = 0.0%]
+({B, F} -> {A, C, D, E, G, H, I})y [Support = 0.0%]
+({A, C, I} -> {B, D, E, F, G, H})y [Support = 0.0%]
+({C, D, I} -> {A, B, E, F, G, H})y [Support = 0.0%]
+({A, E} -> {B, C, D, F, G, H, I})y [Support = 0.0%]
+({B, E} -> {A, C, D, F, G, H, I})y [Support = 0.0%]
+({E, I} -> {A, B, C, D, F, G, H})y [Support = 0.0%]
+({A, C, H} -> {B, D, E, F, G, I})y [Support = 0.0%]
+({C, H, I} -> {A, B, D, E, F, G})y [Support = 0.0%]
+({A, C, F} -> {B, D, E, G, H, I})y [Support = 0.0%]
+({C, F, I} -> {A, B, D, E, G, H})y [Support = 0.0%]
+({A, F} -> {D, H, I})y [Support = 14.3%]
+({D, F, I} -> {A, H})y [Support = 14.3%]
+({F, H, I} -> {A, D})y [Support = 14.3%]
+({A, C} -> {D})y [Support = 14.3%]
+({E} -> {C, D, F, H})y [Support = 14.3%]
+({C, F} -> {D, E, H})y [Support = 14.3%]
+({C, H} -> {D, E, F})y [Support = 14.3%]
+
+Context name : rokia_z
+Objects : {1, 2, 3, 4, 5, 6, 7}
+Attributes : {A, B, C, D, E, F, G, H, I}
+X   0   0   X   0   0   0   0   0
+0   0   0   0   0   X   0   X   X
+0   X   0   0   X   X   X   0   0
+0   0   X   0   X   0   X   0   0
+X   X   X   X   X   X   0   X   X
+X   0   X   X   X   0   X   0   0
+X   X   X   0   X   0   X   0   X
+
+Biedermann Rules for context rokia_z:
+({D} -> {A})z [Support = 42.9%]
+({A, C} -> {E})z [Support = 42.9%]
+({A, E} -> {C})z [Support = 42.9%]
+({H} -> {F, I})z [Support = 28.6%]
+({F, I} -> {H})z [Support = 28.6%]
+({B, F} -> {E})z [Support = 28.6%]
+({E, F} -> {B})z [Support = 28.6%]
+({A, I} -> {B, C, E})z [Support = 28.6%]
+({C, I} -> {A, B, E})z [Support = 28.6%]
+({E, I} -> {A, B, C})z [Support = 28.6%]
+({A, B} -> {C, E, I})z [Support = 28.6%]
+({B, C} -> {A, E, I})z [Support = 28.6%]
+({B, I} -> {A, C, E})z [Support = 28.6%]
+({G} -> {E})z [Support = 57.1%]
+({B} -> {E})z [Support = 42.9%]
+({C} -> {E})z [Support = 57.1%]
+({C, D} -> {A, E})z [Support = 28.6%]
+({D, E} -> {A, C})z [Support = 28.6%]
+({A, G} -> {C, E})z [Support = 28.6%]
+({B, H} -> {A, C, D, E, F, I})z [Support = 14.3%]
+({E, H} -> {A, B, C, D, F, I})z [Support = 14.3%]
+({A, F} -> {B, C, D, E, H, I})z [Support = 14.3%]
+({A, H} -> {B, C, D, E, F, I})z [Support = 14.3%]
+({C, F} -> {A, B, D, E, H, I})z [Support = 14.3%]
+({C, H} -> {A, B, D, E, F, I})z [Support = 14.3%]
+({B, F, I} -> {A, C, D, E, H})z [Support = 14.3%]
+({E, F, I} -> {A, B, C, D, H})z [Support = 14.3%]
+({B, D} -> {A, C, E, F, H, I})z [Support = 14.3%]
+({D, F} -> {A, B, C, E, H, I})z [Support = 14.3%]
+({D, H} -> {A, B, C, E, F, I})z [Support = 14.3%]
+({D, I} -> {A, B, C, E, F, H})z [Support = 14.3%]
+({F, G} -> {B, E})z [Support = 14.3%]
+({G, I} -> {A, B, C, E})z [Support = 14.3%]
+({A, B, G} -> {C, E, I})z [Support = 14.3%]
+({B, C, G} -> {A, E, I})z [Support = 14.3%]
+({B, G} -> {E})z [Support = 28.6%]
+({C, G} -> {E})z [Support = 42.9%]
+({D, G} -> {A, C, E})z [Support = 14.3%]
+({G, H} -> {A, B, C, D, E, F, I})z [Support = 0.0%]
+({A, F, G} -> {B, C, D, E, H, I})z [Support = 0.0%]
+({C, F, G} -> {A, B, D, E, H, I})z [Support = 0.0%]
+({F, G, I} -> {A, B, C, D, E, H})z [Support = 0.0%]
+({B, D, G} -> {A, C, E, F, H, I})z [Support = 0.0%]
+({D, F, G} -> {A, B, C, E, H, I})z [Support = 0.0%]
+({D, G, I} -> {A, B, C, E, F, H})z [Support = 0.0%]
+
+==== BUCKETS ======
+Bucket C
+ Rules:
+({C} -> {E})u [Support = 57.1%]
+({C} -> {A, B, G})v [Support = 14.3%]
+({C} -> {E})z [Support = 57.1%]
+
+Bucket G
+ Rules:
+({G} -> {E})u [Support = 28.6%]
+({G} -> {D})x [Support = 42.9%]
+({G} -> {A, B, C, D, E, F, H, I})y [Support = 0.0%]
+({G} -> {E})z [Support = 57.1%]
+
+Bucket D
+ Rules:
+({D} -> {B, C, E})u [Support = 28.6%]
+({D} -> {A, I})v [Support = 28.6%]
+({D} -> {A})z [Support = 42.9%]
+
+Bucket BC
+ Rules:
+({B, C} -> {D, E})u [Support = 28.6%]
+({B, C} -> {D, G})x [Support = 14.3%]
+({B, C} -> {A, D, E, F, G, H, I})y [Support = 0.0%]
+({B, C} -> {A, E, I})z [Support = 28.6%]
+
+Bucket BE
+ Rules:
+({B, E} -> {C, D})u [Support = 28.6%]
+({B, E} -> {G, I})v [Support = 14.3%]
+({B, E} -> {A, C, D, F, G, H, I})y [Support = 0.0%]
+
+Bucket H
+ Rules:
+({H} -> {A, B})u [Support = 28.6%]
+({H} -> {A, B, D, I})v [Support = 14.3%]
+({H} -> {A, D})x [Support = 42.9%]
+({H} -> {F, I})z [Support = 28.6%]
+
+Bucket AB
+ Rules:
+({A, B} -> {H})u [Support = 28.6%]
+({A, B} -> {D, E, G, H})x [Support = 14.3%]
+({A, B} -> {C, D, E, F, G, H, I})y [Support = 0.0%]
+({A, B} -> {C, E, I})z [Support = 28.6%]
+
+Bucket BI
+ Rules:
+({B, I} -> {C, D, E})u [Support = 14.3%]
+({B, I} -> {A, C, D, E, F, G, H})y [Support = 0.0%]
+({B, I} -> {A, C, E})z [Support = 28.6%]
+
+Bucket CI
+ Rules:
+({C, I} -> {B, D, E})u [Support = 14.3%]
+({C, I} -> {A, B, D, E, F, G, H})v [Support = 0.0%]
+({C, I} -> {A, B, D, E, F, G, H})x [Support = 0.0%]
+({C, I} -> {A, B, E})z [Support = 28.6%]
+
+Bucket DI
+ Rules:
+({D, I} -> {B, C, E})u [Support = 14.3%]
+({D, I} -> {A, B, C, E, F, G, H})x [Support = 0.0%]
+({D, I} -> {A, H})y [Support = 28.6%]
+({D, I} -> {A, B, C, E, F, H})z [Support = 14.3%]
+
+Bucket EI
+ Rules:
+({E, I} -> {B, C, D})u [Support = 14.3%]
+({E, I} -> {B, G})v [Support = 14.3%]
+({E, I} -> {A, B, C, D, F, G, H})y [Support = 0.0%]
+({E, I} -> {A, B, C})z [Support = 28.6%]
+
+Bucket F
+ Rules:
+({F} -> {C, E})u [Support = 14.3%]
+
+Bucket CG
+ Rules:
+({C, G} -> {E})u [Support = 14.3%]
+({C, G} -> {D})x [Support = 28.6%]
+({C, G} -> {E})z [Support = 42.9%]
+
+Bucket AG
+ Rules:
+({A, G} -> {E})u [Support = 14.3%]
+({A, G} -> {B, C})v [Support = 14.3%]
+({A, G} -> {D, H})x [Support = 28.6%]
+({A, G} -> {C, E})z [Support = 28.6%]
+
+Bucket AC
+ Rules:
+({A, C} -> {B, D, E, H})u [Support = 14.3%]
+({A, C} -> {D})y [Support = 14.3%]
+({A, C} -> {E})z [Support = 42.9%]
+
+Bucket AD
+ Rules:
+({A, D} -> {B, C, E, H})u [Support = 14.3%]
+({A, D} -> {H})x [Support = 42.9%]
+
+Bucket CH
+ Rules:
+({C, H} -> {A, B, D, E})u [Support = 14.3%]
+({C, H} -> {A, B, D, E, F, G, I})v [Support = 0.0%]
+({C, H} -> {A, D, F, G})x [Support = 14.3%]
+({C, H} -> {D, E, F})y [Support = 14.3%]
+({C, H} -> {A, B, D, E, F, I})z [Support = 14.3%]
+
+Bucket DH
+ Rules:
+({D, H} -> {A, B, C, E})u [Support = 14.3%]
+({D, H} -> {A, B, C, E, F, I})z [Support = 14.3%]
+
+Bucket EH
+ Rules:
+({E, H} -> {A, B, C, D})u [Support = 14.3%]
+({E, H} -> {A, B, C, D, F, G, I})v [Support = 0.0%]
+({E, H} -> {A, B, D, G})x [Support = 14.3%]
+({E, H} -> {A, B, C, D, F, I})z [Support = 14.3%]
+
+Bucket ABE
+ Rules:
+({A, B, E} -> {C, D, H})u [Support = 14.3%]
+
+Bucket BF
+ Rules:
+({B, F} -> {A, C, D, E, G, H, I})u [Support = 0.0%]
+({B, F} -> {A, C, D, E, G, H, I})v [Support = 0.0%]
+({B, F} -> {A, C, D, E, G, H, I})x [Support = 0.0%]
+({B, F} -> {A, C, D, E, G, H, I})y [Support = 0.0%]
+({B, F} -> {E})z [Support = 28.6%]
+
+Bucket DF
+ Rules:
+({D, F} -> {A, B, C, E, G, H, I})u [Support = 0.0%]
+({D, F} -> {A, B, C, E, G, H, I})v [Support = 0.0%]
+({D, F} -> {A, H})x [Support = 28.6%]
+({D, F} -> {H})y [Support = 28.6%]
+({D, F} -> {A, B, C, E, H, I})z [Support = 14.3%]
+
+Bucket FI
+ Rules:
+({F, I} -> {A, B, C, D, E, G, H})u [Support = 0.0%]
+({F, I} -> {A, B, C, D, E, G, H})v [Support = 0.0%]
+({F, I} -> {A, B, C, D, E, G, H})x [Support = 0.0%]
+({F, I} -> {H})z [Support = 28.6%]
+
+Bucket BG
+ Rules:
+({B, G} -> {A, C, D, E, F, H, I})u [Support = 0.0%]
+({B, G} -> {D})x [Support = 28.6%]
+({B, G} -> {E})z [Support = 28.6%]
+
+Bucket DG
+ Rules:
+({D, G} -> {A, B, C, E, F, H, I})u [Support = 0.0%]
+({D, G} -> {A, B, C, E, F, H, I})v [Support = 0.0%]
+({D, G} -> {A, C, E})z [Support = 14.3%]
+
+Bucket FG
+ Rules:
+({F, G} -> {A, B, C, D, E, H, I})u [Support = 0.0%]
+({F, G} -> {A, B, C, D, E, H, I})v [Support = 0.0%]
+({F, G} -> {A, C, D, H})x [Support = 14.3%]
+({F, G} -> {B, E})z [Support = 14.3%]
+
+Bucket GI
+ Rules:
+({G, I} -> {A, B, C, D, E, F, H})u [Support = 0.0%]
+({G, I} -> {B, E})v [Support = 14.3%]
+({G, I} -> {A, B, C, D, E, F, H})x [Support = 0.0%]
+({G, I} -> {A, B, C, E})z [Support = 14.3%]
+
+Bucket AF
+ Rules:
+({A, F} -> {B, C, D, E, G, H, I})u [Support = 0.0%]
+({A, F} -> {B, C, D, E, G, H, I})v [Support = 0.0%]
+({A, F} -> {D, H})x [Support = 28.6%]
+({A, F} -> {D, H, I})y [Support = 14.3%]
+({A, F} -> {B, C, D, E, H, I})z [Support = 14.3%]
+
+Bucket AI
+ Rules:
+({A, I} -> {B, C, D, E, F, G, H})u [Support = 0.0%]
+({A, I} -> {D})v [Support = 28.6%]
+({A, I} -> {B, C, D, E, F, G, H})x [Support = 0.0%]
+({A, I} -> {D, H})y [Support = 28.6%]
+({A, I} -> {B, C, E})z [Support = 28.6%]
+
+Bucket FH
+ Rules:
+({F, H} -> {A, B, C, D, E, G, I})u [Support = 0.0%]
+({F, H} -> {A, B, C, D, E, G, I})v [Support = 0.0%]
+({F, H} -> {A, D})x [Support = 28.6%]
+({F, H} -> {D})y [Support = 28.6%]
+
+Bucket GH
+ Rules:
+({G, H} -> {A, B, C, D, E, F, I})u [Support = 0.0%]
+({G, H} -> {A, B, C, D, E, F, I})v [Support = 0.0%]
+({G, H} -> {A, D})x [Support = 28.6%]
+({G, H} -> {A, B, C, D, E, F, I})z [Support = 0.0%]
+
+Bucket HI
+ Rules:
+({H, I} -> {A, B, C, D, E, F, G})u [Support = 0.0%]
+({H, I} -> {A, B, C, D, E, F, G})x [Support = 0.0%]
+({H, I} -> {A, D})y [Support = 28.6%]
+
+Bucket ACG
+ Rules:
+({A, C, G} -> {B, D, E, F, H, I})u [Support = 0.0%]
+({A, C, G} -> {D, F, H})x [Support = 14.3%]
+
+Bucket E
+ Rules:
+({E} -> {G})v [Support = 28.6%]
+({E} -> {B})x [Support = 28.6%]
+({E} -> {C, D, F, H})y [Support = 14.3%]
+
+Bucket EF
+ Rules:
+({E, F} -> {A, B, C, D, G, H, I})v [Support = 0.0%]
+({E, F} -> {A, B, C, D, G, H, I})x [Support = 0.0%]
+({E, F} -> {B})z [Support = 28.6%]
+
+Bucket AE
+ Rules:
+({A, E} -> {B, C, D, F, G, H, I})v [Support = 0.0%]
+({A, E} -> {B, D, G, H})x [Support = 14.3%]
+({A, E} -> {B, C, D, F, G, H, I})y [Support = 0.0%]
+({A, E} -> {C})z [Support = 42.9%]
+
+Bucket CE
+ Rules:
+({C, E} -> {A, B, D, F, G, H, I})v [Support = 0.0%]
+({C, E} -> {A, B, D, F, G, H, I})x [Support = 0.0%]
+
+Bucket CF
+ Rules:
+({C, F} -> {A, B, D, E, G, H, I})v [Support = 0.0%]
+({C, F} -> {A, D, G, H})x [Support = 14.3%]
+({C, F} -> {D, E, H})y [Support = 14.3%]
+({C, F} -> {A, B, D, E, H, I})z [Support = 14.3%]
+
+Bucket CD
+ Rules:
+({C, D} -> {A, B, E, F, G, H, I})v [Support = 0.0%]
+({C, D} -> {G})x [Support = 28.6%]
+({C, D} -> {A, E})z [Support = 28.6%]
+
+Bucket DE
+ Rules:
+({D, E} -> {A, B, C, F, G, H, I})v [Support = 0.0%]
+({D, E} -> {A, B, G, H})x [Support = 14.3%]
+({D, E} -> {A, C})z [Support = 28.6%]
+
+Bucket AGI
+ Rules:
+({A, G, I} -> {B, C, D, E, F, H})v [Support = 0.0%]
+
+Bucket BD
+ Rules:
+({B, D} -> {A, H, I})v [Support = 14.3%]
+({B, D} -> {G})x [Support = 28.6%]
+({B, D} -> {A, C, E, F, G, H, I})y [Support = 0.0%]
+({B, D} -> {A, C, E, F, H, I})z [Support = 14.3%]
+
+Bucket ABI
+ Rules:
+({A, B, I} -> {D, H})v [Support = 14.3%]
+
+Bucket ACD
+ Rules:
+({A, C, D} -> {F, G, H})x [Support = 14.3%]
+
+Bucket EG
+ Rules:
+({E, G} -> {A, B, D, H})x [Support = 14.3%]
+
+Bucket BH
+ Rules:
+({B, H} -> {A, D, E, G})x [Support = 14.3%]
+({B, H} -> {A, C, D, E, F, I})z [Support = 14.3%]
+
+Bucket I
+ Rules:
+({I} -> {B, E})x [Support = 14.3%]
+
+Bucket ABC
+ Rules:
+({A, B, C} -> {D, E, F, G, H, I})x [Support = 0.0%]
+
+Bucket BCH
+ Rules:
+({B, C, H} -> {A, D, E, F, G, I})x [Support = 0.0%]
+
+Bucket B
+ Rules:
+({B} -> {H})y [Support = 14.3%]
+({B} -> {E})z [Support = 42.9%]
+
+Bucket AH
+ Rules:
+({A, H} -> {D, I})y [Support = 28.6%]
+({A, H} -> {B, C, D, E, F, I})z [Support = 14.3%]
+
+Bucket A
+ Rules:
+({A} -> {D})y [Support = 42.9%]
+
+Bucket ACI
+ Rules:
+({A, C, I} -> {B, D, E, F, G, H})y [Support = 0.0%]
+
+Bucket CDI
+ Rules:
+({C, D, I} -> {A, B, E, F, G, H})y [Support = 0.0%]
+
+Bucket ACH
+ Rules:
+({A, C, H} -> {B, D, E, F, G, I})y [Support = 0.0%]
+
+Bucket CHI
+ Rules:
+({C, H, I} -> {A, B, D, E, F, G})y [Support = 0.0%]
+
+Bucket ACF
+ Rules:
+({A, C, F} -> {B, D, E, G, H, I})y [Support = 0.0%]
+
+Bucket CFI
+ Rules:
+({C, F, I} -> {A, B, D, E, G, H})y [Support = 0.0%]
+
+Bucket DFI
+ Rules:
+({D, F, I} -> {A, H})y [Support = 14.3%]
+
+Bucket FHI
+ Rules:
+({F, H, I} -> {A, D})y [Support = 14.3%]
+
+Bucket BFI
+ Rules:
+({B, F, I} -> {A, C, D, E, H})z [Support = 14.3%]
+
+Bucket EFI
+ Rules:
+({E, F, I} -> {A, B, C, D, H})z [Support = 14.3%]
+
+Bucket ABG
+ Rules:
+({A, B, G} -> {C, E, I})z [Support = 14.3%]
+
+Bucket BCG
+ Rules:
+({B, C, G} -> {A, E, I})z [Support = 14.3%]
+
+Bucket AFG
+ Rules:
+({A, F, G} -> {B, C, D, E, H, I})z [Support = 0.0%]
+
+Bucket CFG
+ Rules:
+({C, F, G} -> {A, B, D, E, H, I})z [Support = 0.0%]
+
+Bucket FGI
+ Rules:
+({F, G, I} -> {A, B, C, D, E, H})z [Support = 0.0%]
+
+Bucket BDG
+ Rules:
+({B, D, G} -> {A, C, E, F, H, I})z [Support = 0.0%]
+
+Bucket DFG
+ Rules:
+({D, F, G} -> {A, B, C, E, H, I})z [Support = 0.0%]
+
+Bucket DGI
+ Rules:
+({D, G, I} -> {A, B, C, E, F, H})z [Support = 0.0%]
+
+==== CAI ======
+Bucket C
+ Rules:
+{C}-(uz)>{E} [Support = 57.1%]
+{C}-(v)>{A, B, G} [Support = 14.3%]
+
+Bucket G
+ Rules:
+{G}-(xy)>{D} [Support = 0.0%]
+{G}-(uyz)>{E} [Support = 0.0%]
+{G}-(y)>{A, B, C, F, H, I} [Support = 0.0%]
+
+Bucket D
+ Rules:
+{D}-(vz)>{A} [Support = 28.6%]
+{D}-(u)>{B, C, E} [Support = 28.6%]
+{D}-(v)>{I} [Support = 28.6%]
+
+Bucket BC
+ Rules:
+{B, C}-(yz)>{A, I} [Support = 0.0%]
+{B, C}-(xy)>{G} [Support = 0.0%]
+{B, C}-(uxy)>{D} [Support = 0.0%]
+{B, C}-(uyz)>{E} [Support = 0.0%]
+{B, C}-(y)>{F, H} [Support = 0.0%]
+
+Bucket BE
+ Rules:
+{B, E}-(vy)>{G, I} [Support = 0.0%]
+{B, E}-(uy)>{C, D} [Support = 0.0%]
+{B, E}-(y)>{A, F, H} [Support = 0.0%]
+
+Bucket H
+ Rules:
+{H}-(uv)>{B} [Support = 14.3%]
+{H}-(vx)>{D} [Support = 14.3%]
+{H}-(vz)>{I} [Support = 14.3%]
+{H}-(uvx)>{A} [Support = 14.3%]
+{H}-(z)>{F} [Support = 28.6%]
+
+Bucket AB
+ Rules:
+{A, B}-(yz)>{C, I} [Support = 0.0%]
+{A, B}-(xy)>{D, G} [Support = 0.0%]
+{A, B}-(uxy)>{H} [Support = 0.0%]
+{A, B}-(xyz)>{E} [Support = 0.0%]
+{A, B}-(y)>{F} [Support = 0.0%]
+
+Bucket BI
+ Rules:
+{B, I}-(yz)>{A} [Support = 0.0%]
+{B, I}-(uy)>{D} [Support = 0.0%]
+{B, I}-(uyz)>{C, E} [Support = 0.0%]
+{B, I}-(y)>{F, G, H} [Support = 0.0%]
+
+Bucket CI
+ Rules:
+{C, I}-(vx)>{F, G, H} [Support = 0.0%]
+{C, I}-(uvxz)>{B, E} [Support = 0.0%]
+{C, I}-(uvx)>{D} [Support = 0.0%]
+{C, I}-(vxz)>{A} [Support = 0.0%]
+
+Bucket DI
+ Rules:
+{D, I}-(xz)>{F} [Support = 0.0%]
+{D, I}-(uxz)>{B, C, E} [Support = 0.0%]
+{D, I}-(xyz)>{A, H} [Support = 0.0%]
+{D, I}-(x)>{G} [Support = 0.0%]
+
+Bucket EI
+ Rules:
+{E, I}-(yz)>{A} [Support = 0.0%]
+{E, I}-(vy)>{G} [Support = 0.0%]
+{E, I}-(uvyz)>{B} [Support = 0.0%]
+{E, I}-(uy)>{D} [Support = 0.0%]
+{E, I}-(uyz)>{C} [Support = 0.0%]
+{E, I}-(y)>{F, H} [Support = 0.0%]
+
+Bucket F
+ Rules:
+{F}-(u)>{C, E} [Support = 14.3%]
+
+Bucket CG
+ Rules:
+{C, G}-(uz)>{E} [Support = 14.3%]
+{C, G}-(x)>{D} [Support = 28.6%]
+
+Bucket AG
+ Rules:
+{A, G}-(vz)>{C} [Support = 14.3%]
+{A, G}-(uz)>{E} [Support = 14.3%]
+{A, G}-(v)>{B} [Support = 14.3%]
+{A, G}-(x)>{D, H} [Support = 28.6%]
+
+Bucket AC
+ Rules:
+{A, C}-(uy)>{D} [Support = 14.3%]
+{A, C}-(u)>{B, H} [Support = 14.3%]
+{A, C}-(uz)>{E} [Support = 14.3%]
+
+Bucket AD
+ Rules:
+{A, D}-(ux)>{H} [Support = 14.3%]
+{A, D}-(u)>{B, C, E} [Support = 14.3%]
+
+Bucket CH
+ Rules:
+{C, H}-(uvxyz)>{D} [Support = 0.0%]
+{C, H}-(vx)>{G} [Support = 0.0%]
+{C, H}-(uvyz)>{E} [Support = 0.0%]
+{C, H}-(vxyz)>{F} [Support = 0.0%]
+{C, H}-(vz)>{I} [Support = 0.0%]
+{C, H}-(uvxz)>{A} [Support = 0.0%]
+{C, H}-(uvz)>{B} [Support = 0.0%]
+
+Bucket DH
+ Rules:
+{D, H}-(uz)>{A, B, C, E} [Support = 14.3%]
+{D, H}-(z)>{F, I} [Support = 14.3%]
+
+Bucket EH
+ Rules:
+{E, H}-(vx)>{G} [Support = 0.0%]
+{E, H}-(vz)>{F, I} [Support = 0.0%]
+{E, H}-(uvxz)>{A, B, D} [Support = 0.0%]
+{E, H}-(uvz)>{C} [Support = 0.0%]
+
+Bucket ABE
+ Rules:
+{A, B, E}-(u)>{C, D, H} [Support = 14.3%]
+
+Bucket BF
+ Rules:
+{B, F}-(uvxyz)>{E} [Support = 0.0%]
+{B, F}-(uvxy)>{A, C, D, G, H, I} [Support = 0.0%]
+
+Bucket DF
+ Rules:
+{D, F}-(uvxyz)>{H} [Support = 0.0%]
+{D, F}-(uv)>{G} [Support = 0.0%]
+{D, F}-(uvxz)>{A} [Support = 0.0%]
+{D, F}-(uvz)>{B, C, E, I} [Support = 0.0%]
+
+Bucket FI
+ Rules:
+{F, I}-(uvxz)>{H} [Support = 0.0%]
+{F, I}-(uvx)>{A, B, C, D, E, G} [Support = 0.0%]
+
+Bucket BG
+ Rules:
+{B, G}-(ux)>{D} [Support = 0.0%]
+{B, G}-(u)>{A, C, F, H, I} [Support = 0.0%]
+{B, G}-(uz)>{E} [Support = 0.0%]
+
+Bucket DG
+ Rules:
+{D, G}-(uv)>{B, F, H, I} [Support = 0.0%]
+{D, G}-(uvz)>{A, C, E} [Support = 0.0%]
+
+Bucket FG
+ Rules:
+{F, G}-(uv)>{I} [Support = 0.0%]
+{F, G}-(uvx)>{A, C, D, H} [Support = 0.0%]
+{F, G}-(uvz)>{B, E} [Support = 0.0%]
+
+Bucket GI
+ Rules:
+{G, I}-(ux)>{D, F, H} [Support = 0.0%]
+{G, I}-(uvxz)>{B, E} [Support = 0.0%]
+{G, I}-(uxz)>{A, C} [Support = 0.0%]
+
+Bucket AF
+ Rules:
+{A, F}-(uvxyz)>{D, H} [Support = 0.0%]
+{A, F}-(uv)>{G} [Support = 0.0%]
+{A, F}-(uvyz)>{I} [Support = 0.0%]
+{A, F}-(uvz)>{B, C, E} [Support = 0.0%]
+
+Bucket AI
+ Rules:
+{A, I}-(ux)>{F, G} [Support = 0.0%]
+{A, I}-(uvxy)>{D} [Support = 0.0%]
+{A, I}-(uxz)>{B, C, E} [Support = 0.0%]
+{A, I}-(uxy)>{H} [Support = 0.0%]
+
+Bucket FH
+ Rules:
+{F, H}-(uv)>{B, C, E, G, I} [Support = 0.0%]
+{F, H}-(uvxy)>{D} [Support = 0.0%]
+{F, H}-(uvx)>{A} [Support = 0.0%]
+
+Bucket GH
+ Rules:
+{G, H}-(uvxz)>{A, D} [Support = 0.0%]
+{G, H}-(uvz)>{B, C, E, F, I} [Support = 0.0%]
+
+Bucket HI
+ Rules:
+{H, I}-(ux)>{B, C, E, F, G} [Support = 0.0%]
+{H, I}-(uxy)>{A, D} [Support = 0.0%]
+
+Bucket ACG
+ Rules:
+{A, C, G}-(ux)>{D, F, H} [Support = 0.0%]
+{A, C, G}-(u)>{B, E, I} [Support = 0.0%]
+
+Bucket E
+ Rules:
+{E}-(v)>{G} [Support = 28.6%]
+{E}-(x)>{B} [Support = 28.6%]
+{E}-(y)>{C, D, F, H} [Support = 14.3%]
+
+Bucket EF
+ Rules:
+{E, F}-(vx)>{A, C, D, G, H, I} [Support = 0.0%]
+{E, F}-(vxz)>{B} [Support = 0.0%]
+
+Bucket AE
+ Rules:
+{A, E}-(vy)>{F, I} [Support = 0.0%]
+{A, E}-(vxy)>{B, D, G, H} [Support = 0.0%]
+{A, E}-(vyz)>{C} [Support = 0.0%]
+
+Bucket CE
+ Rules:
+{C, E}-(vx)>{A, B, D, F, G, H, I} [Support = 0.0%]
+
+Bucket CF
+ Rules:
+{C, F}-(vx)>{G} [Support = 0.0%]
+{C, F}-(vz)>{B, I} [Support = 0.0%]
+{C, F}-(vxyz)>{D, H} [Support = 0.0%]
+{C, F}-(vyz)>{E} [Support = 0.0%]
+{C, F}-(vxz)>{A} [Support = 0.0%]
+
+Bucket CD
+ Rules:
+{C, D}-(vx)>{G} [Support = 0.0%]
+{C, D}-(vz)>{A, E} [Support = 0.0%]
+{C, D}-(v)>{B, F, H, I} [Support = 0.0%]
+
+Bucket DE
+ Rules:
+{D, E}-(vx)>{B, G, H} [Support = 0.0%]
+{D, E}-(vz)>{C} [Support = 0.0%]
+{D, E}-(v)>{F, I} [Support = 0.0%]
+{D, E}-(vxz)>{A} [Support = 0.0%]
+
+Bucket AGI
+ Rules:
+{A, G, I}-(v)>{B, C, D, E, F, H} [Support = 0.0%]
+
+Bucket BD
+ Rules:
+{B, D}-(yz)>{C, E, F} [Support = 0.0%]
+{B, D}-(xy)>{G} [Support = 0.0%]
+{B, D}-(vyz)>{A, H, I} [Support = 0.0%]
+
+Bucket ABI
+ Rules:
+{A, B, I}-(v)>{D, H} [Support = 14.3%]
+
+Bucket ACD
+ Rules:
+{A, C, D}-(x)>{F, G, H} [Support = 14.3%]
+
+Bucket EG
+ Rules:
+{E, G}-(x)>{A, B, D, H} [Support = 14.3%]
+
+Bucket BH
+ Rules:
+{B, H}-(xz)>{A, D, E} [Support = 14.3%]
+{B, H}-(x)>{G} [Support = 14.3%]
+{B, H}-(z)>{C, F, I} [Support = 14.3%]
+
+Bucket I
+ Rules:
+{I}-(x)>{B, E} [Support = 14.3%]
+
+Bucket ABC
+ Rules:
+{A, B, C}-(x)>{D, E, F, G, H, I} [Support = 0.0%]
+
+Bucket BCH
+ Rules:
+{B, C, H}-(x)>{A, D, E, F, G, I} [Support = 0.0%]
+
+Bucket B
+ Rules:
+{B}-(y)>{H} [Support = 14.3%]
+{B}-(z)>{E} [Support = 42.9%]
+
+Bucket AH
+ Rules:
+{A, H}-(yz)>{D, I} [Support = 14.3%]
+{A, H}-(z)>{B, C, E, F} [Support = 14.3%]
+
+Bucket A
+ Rules:
+{A}-(y)>{D} [Support = 42.9%]
+
+Bucket ACI
+ Rules:
+{A, C, I}-(y)>{B, D, E, F, G, H} [Support = 0.0%]
+
+Bucket CDI
+ Rules:
+{C, D, I}-(y)>{A, B, E, F, G, H} [Support = 0.0%]
+
+Bucket ACH
+ Rules:
+{A, C, H}-(y)>{B, D, E, F, G, I} [Support = 0.0%]
+
+Bucket CHI
+ Rules:
+{C, H, I}-(y)>{A, B, D, E, F, G} [Support = 0.0%]
+
+Bucket ACF
+ Rules:
+{A, C, F}-(y)>{B, D, E, G, H, I} [Support = 0.0%]
+
+Bucket CFI
+ Rules:
+{C, F, I}-(y)>{A, B, D, E, G, H} [Support = 0.0%]
+
+Bucket DFI
+ Rules:
+{D, F, I}-(y)>{A, H} [Support = 14.3%]
+
+Bucket FHI
+ Rules:
+{F, H, I}-(y)>{A, D} [Support = 14.3%]
+
+Bucket BFI
+ Rules:
+{B, F, I}-(z)>{A, C, D, E, H} [Support = 14.3%]
+
+Bucket EFI
+ Rules:
+{E, F, I}-(z)>{A, B, C, D, H} [Support = 14.3%]
+
+Bucket ABG
+ Rules:
+{A, B, G}-(z)>{C, E, I} [Support = 14.3%]
+
+Bucket BCG
+ Rules:
+{B, C, G}-(z)>{A, E, I} [Support = 14.3%]
+
+Bucket AFG
+ Rules:
+{A, F, G}-(z)>{B, C, D, E, H, I} [Support = 0.0%]
+
+Bucket CFG
+ Rules:
+{C, F, G}-(z)>{A, B, D, E, H, I} [Support = 0.0%]
+
+Bucket FGI
+ Rules:
+{F, G, I}-(z)>{A, B, C, D, E, H} [Support = 0.0%]
+
+Bucket BDG
+ Rules:
+{B, D, G}-(z)>{A, C, E, F, H, I} [Support = 0.0%]
+
+Bucket DFG
+ Rules:
+{D, F, G}-(z)>{A, B, C, E, H, I} [Support = 0.0%]
+
+Bucket DGI
+ Rules:
+{D, G, I}-(z)>{A, B, C, E, F, H} [Support = 0.0%]

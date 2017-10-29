@@ -1,0 +1,130 @@
+== Diadic decomposition  ==
+Context name : kuznetsov_a
+Objects : {1, 2, 3, 4}
+Attributes : {α, β, γ, δ}
+X   X   0   0   
+X   X   0   0   
+0   X   0   0   
+0   0   0   0   
+
+Biedermann Rules for context kuznetsov_a: 
+({α} -> {β})a [Support = 50.0%]
+({γ} -> {α, β, δ})a [Support = 0.0%]
+({δ} -> {α, β, γ})a [Support = 0.0%]
+
+Context name : kuznetsov_b
+Objects : {1, 2, 3, 4}
+Attributes : {α, β, γ, δ}
+0   0   0   0   
+0   X   X   X   
+0   X   X   0   
+0   0   0   0   
+
+Biedermann Rules for context kuznetsov_b: 
+({β} -> {γ})b [Support = 50.0%]
+({γ} -> {β})b [Support = 50.0%]
+({δ} -> {β, γ})b [Support = 25.0%]
+({α} -> {β, γ, δ})b [Support = 0.0%]
+
+Context name : kuznetsov_c
+Objects : {1, 2, 3, 4}
+Attributes : {α, β, γ, δ}
+0   0   0   0   
+0   X   X   X   
+X   X   X   0   
+0   0   0   0   
+
+Biedermann Rules for context kuznetsov_c: 
+({β} -> {γ})c [Support = 50.0%]
+({γ} -> {β})c [Support = 50.0%]
+({δ} -> {β, γ})c [Support = 25.0%]
+({α} -> {β, γ})c [Support = 25.0%]
+({α, δ} -> {β, γ})c [Support = 0.0%]
+
+Context name : kuznetsov_d
+Objects : {1, 2, 3, 4}
+Attributes : {α, β, γ, δ}
+0   X   X   0   
+0   0   0   0   
+X   0   0   0   
+0   X   0   0   
+
+Biedermann Rules for context kuznetsov_d: 
+({γ} -> {β})d [Support = 25.0%]
+({δ} -> {α, β, γ})d [Support = 0.0%]
+({α, β} -> {γ, δ})d [Support = 0.0%]
+({α, γ} -> {β, δ})d [Support = 0.0%]
+
+==== BUCKETS ======
+Bucket α
+ Rules:
+({α} -> {β})a [Support = 50.0%]
+({α} -> {β, γ, δ})b [Support = 0.0%]
+({α} -> {β, γ})c [Support = 25.0%]
+
+Bucket γ
+ Rules:
+({γ} -> {α, β, δ})a [Support = 0.0%]
+({γ} -> {β})b [Support = 50.0%]
+({γ} -> {β})c [Support = 50.0%]
+({γ} -> {β})d [Support = 25.0%]
+
+Bucket δ
+ Rules:
+({δ} -> {α, β, γ})a [Support = 0.0%]
+({δ} -> {β, γ})b [Support = 25.0%]
+({δ} -> {β, γ})c [Support = 25.0%]
+({δ} -> {α, β, γ})d [Support = 0.0%]
+
+Bucket β
+ Rules:
+({β} -> {γ})b [Support = 50.0%]
+({β} -> {γ})c [Support = 50.0%]
+
+Bucket αδ
+ Rules:
+({α, δ} -> {β, γ})c [Support = 0.0%]
+
+Bucket αβ
+ Rules:
+({α, β} -> {γ, δ})d [Support = 0.0%]
+
+Bucket αγ
+ Rules:
+({α, γ} -> {β, δ})d [Support = 0.0%]
+
+==== CAI ======
+Bucket α
+ Rules:
+{α}-(bc)>{γ} [Support = 0.0%]
+{α}-(b)>{δ} [Support = 0.0%]
+{α}-(abc)>{β} [Support = 0.0%]
+
+Bucket γ
+ Rules:
+{γ}-(a)>{α, δ} [Support = 0.0%]
+{γ}-(abcd)>{β} [Support = 0.0%]
+
+Bucket δ
+ Rules:
+{δ}-(ad)>{α} [Support = 0.0%]
+{δ}-(abcd)>{β, γ} [Support = 0.0%]
+
+Bucket β
+ Rules:
+{β}-(bc)>{γ} [Support = 50.0%]
+
+Bucket αδ
+ Rules:
+{α, δ}-(c)>{β, γ} [Support = 0.0%]
+
+Bucket αβ
+ Rules:
+{α, β}-(d)>{γ, δ} [Support = 0.0%]
+
+Bucket αγ
+ Rules:
+{α, γ}-(d)>{β, δ} [Support = 0.0%]
+
+
+Process finished with exit code 0

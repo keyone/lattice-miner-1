@@ -1,0 +1,143 @@
+== Diadic decomposition  ==
+Context name : lehmann_wille_u
+Objects : {1, 2, 3, 4, 5}
+Attributes : {A, B, C, D, E}
+X   X   X   X   X
+X   X   X   X   X
+X   X   X   X   X
+X   X   X   X   X
+X   X   X   X   0
+
+Biedermann Rules for context lehmann_wille_u:
+({A} -> {B, C, D})u [Support = 100.0%]
+({B} -> {A, C, D})u [Support = 100.0%]
+({C} -> {A, B, D})u [Support = 100.0%]
+({D} -> {A, B, C})u [Support = 100.0%]
+({E} -> {A, B, C, D})u [Support = 80.0%]
+
+Context name : lehmann_wille_v
+Objects : {1, 2, 3, 4, 5}
+Attributes : {A, B, C, D, E}
+X   X   X   X   0
+X   X   X   0   0
+X   X   0   0   0
+X   0   0   0   0
+0   0   0   0   0
+
+Biedermann Rules for context lehmann_wille_v:
+({B} -> {A})v [Support = 60.0%]
+({C} -> {A, B})v [Support = 40.0%]
+({D} -> {A, B, C})v [Support = 20.0%]
+({E} -> {A, B, C, D})v [Support = 0.0%]
+
+Context name : lehmann_wille_x
+Objects : {1, 2, 3, 4, 5}
+Attributes : {A, B, C, D, E}
+X   X   X   X   X
+X   X   X   X   X
+X   X   X   X   X
+X   X   X   X   0
+X   X   X   0   0
+
+Biedermann Rules for context lehmann_wille_x:
+({A} -> {B, C})x [Support = 100.0%]
+({B} -> {A, C})x [Support = 100.0%]
+({C} -> {A, B})x [Support = 100.0%]
+({D} -> {A, B, C})x [Support = 80.0%]
+({E} -> {A, B, C, D})x [Support = 60.0%]
+
+Context name : lehmann_wille_y
+Objects : {1, 2, 3, 4, 5}
+Attributes : {A, B, C, D, E}
+X   X   X   X   X
+X   X   X   X   X
+X   X   X   X   0
+X   X   X   0   0
+X   X   0   0   0
+
+Biedermann Rules for context lehmann_wille_y:
+({A} -> {B})y [Support = 100.0%]
+({B} -> {A})y [Support = 100.0%]
+({C} -> {A, B})y [Support = 80.0%]
+({D} -> {A, B, C})y [Support = 60.0%]
+({E} -> {A, B, C, D})y [Support = 40.0%]
+
+Context name : lehmann_wille_z
+Objects : {1, 2, 3, 4, 5}
+Attributes : {A, B, C, D, E}
+X   X   X   X   X
+X   X   X   X   0
+X   X   X   0   0
+X   X   0   0   0
+X   0   0   0   0
+
+Biedermann Rules for context lehmann_wille_z:
+({B} -> {A})z [Support = 80.0%]
+({C} -> {A, B})z [Support = 60.0%]
+({D} -> {A, B, C})z [Support = 40.0%]
+({E} -> {A, B, C, D})z [Support = 20.0%]
+
+==== BUCKETS ======
+Bucket A
+ Rules:
+({A} -> {B, C, D})u [Support = 100.0%]
+({A} -> {B, C})x [Support = 100.0%]
+({A} -> {B})y [Support = 100.0%]
+
+Bucket B
+ Rules:
+({B} -> {A, C, D})u [Support = 100.0%]
+({B} -> {A})v [Support = 60.0%]
+({B} -> {A, C})x [Support = 100.0%]
+({B} -> {A})y [Support = 100.0%]
+({B} -> {A})z [Support = 80.0%]
+
+Bucket C
+ Rules:
+({C} -> {A, B, D})u [Support = 100.0%]
+({C} -> {A, B})v [Support = 40.0%]
+({C} -> {A, B})x [Support = 100.0%]
+({C} -> {A, B})y [Support = 80.0%]
+({C} -> {A, B})z [Support = 60.0%]
+
+Bucket D
+ Rules:
+({D} -> {A, B, C})u [Support = 100.0%]
+({D} -> {A, B, C})v [Support = 20.0%]
+({D} -> {A, B, C})x [Support = 80.0%]
+({D} -> {A, B, C})y [Support = 60.0%]
+({D} -> {A, B, C})z [Support = 40.0%]
+
+Bucket E
+ Rules:
+({E} -> {A, B, C, D})u [Support = 80.0%]
+({E} -> {A, B, C, D})v [Support = 0.0%]
+({E} -> {A, B, C, D})x [Support = 60.0%]
+({E} -> {A, B, C, D})y [Support = 40.0%]
+({E} -> {A, B, C, D})z [Support = 20.0%]
+
+==== CAI ======
+Bucket A
+ Rules:
+{A}-(ux)>{C} [Support = 100.0%]
+{A}-(u)>{D} [Support = 100.0%]
+{A}-(uxy)>{B} [Support = 100.0%]
+
+Bucket B
+ Rules:
+{B}-(uvxyz)>{A} [Support = 60.0%]
+{B}-(ux)>{C} [Support = 100.0%]
+{B}-(u)>{D} [Support = 100.0%]
+
+Bucket C
+ Rules:
+{C}-(uvxyz)>{A, B} [Support = 40.0%]
+{C}-(u)>{D} [Support = 100.0%]
+
+Bucket D
+ Rules:
+{D}-(uvxyz)>{A, B, C} [Support = 20.0%]
+
+Bucket E
+ Rules:
+{E}-(uvxyz)>{A, B, C, D} [Support = 0.0%]

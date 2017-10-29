@@ -1,0 +1,193 @@
+== Diadic decomposition  ==
+Context name : cla2016_a
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+X   X   X   X   X
+X   0   X   X   0
+X   0   X   X   X
+X   0   X   X   0
+X   X   X   X   X
+
+Biedermann Rules for context cla2016_a:
+({K} -> {P, R})a [Support = 100.0%]
+({P} -> {K, R})a [Support = 100.0%]
+({R} -> {K, P})a [Support = 100.0%]
+({S} -> {K, P, R})a [Support = 60.0%]
+({N} -> {K, P, R, S})a [Support = 40.0%]
+
+Context name : cla2016_b
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+X   X   0   X   0
+0   X   X   0   0
+X   0   X   X   0
+X   X   X   X   0
+0   0   X   X   0
+
+Biedermann Rules for context cla2016_b:
+({K, N} -> {P})b [Support = 40.0%]
+({N, P} -> {K})b [Support = 40.0%]
+({P} -> {K})b [Support = 60.0%]
+({K, N, R} -> {P})b [Support = 20.0%]
+({N, P, R} -> {K})b [Support = 20.0%]
+({P, R} -> {K})b [Support = 40.0%]
+({S} -> {K, N, P, R})b [Support = 0.0%]
+
+Context name : cla2016_d
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+0   0   X   0   0
+0   X   0   0   0
+0   0   0   0   0
+0   0   0   0   0
+0   0   0   X   0
+
+Biedermann Rules for context cla2016_d:
+({P} -> {K, N, R, S})d [Support = 0.0%]
+({S} -> {K, N, P, R})d [Support = 0.0%]
+({N, R} -> {K, P, S})d [Support = 0.0%]
+({K, N} -> {P, R, S})d [Support = 0.0%]
+({K, R} -> {N, P, S})d [Support = 0.0%]
+
+Context name : cla2016_e
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+X   X   0   0   0
+X   X   X   X   X
+X   X   0   0   0
+X   X   0   0   X
+X   X   X   0   0
+
+Biedermann Rules for context cla2016_e:
+({N} -> {P})e [Support = 100.0%]
+({P} -> {N})e [Support = 100.0%]
+({S} -> {N, P})e [Support = 40.0%]
+({R} -> {N, P})e [Support = 40.0%]
+({K} -> {N, P, R, S})e [Support = 20.0%]
+({R, S} -> {K, N, P})e [Support = 20.0%]
+
+==== BUCKETS ======
+Bucket K
+ Rules:
+({K} -> {P, R})a [Support = 100.0%]
+({K} -> {N, P, R, S})e [Support = 20.0%]
+
+Bucket P
+ Rules:
+({P} -> {K, R})a [Support = 100.0%]
+({P} -> {K})b [Support = 60.0%]
+({P} -> {K, N, R, S})d [Support = 0.0%]
+({P} -> {N})e [Support = 100.0%]
+
+Bucket R
+ Rules:
+({R} -> {K, P})a [Support = 100.0%]
+({R} -> {N, P})e [Support = 40.0%]
+
+Bucket S
+ Rules:
+({S} -> {K, P, R})a [Support = 60.0%]
+({S} -> {K, N, P, R})b [Support = 0.0%]
+({S} -> {K, N, P, R})d [Support = 0.0%]
+({S} -> {N, P})e [Support = 40.0%]
+
+Bucket N
+ Rules:
+({N} -> {K, P, R, S})a [Support = 40.0%]
+({N} -> {P})e [Support = 100.0%]
+
+Bucket KN
+ Rules:
+({K, N} -> {P})b [Support = 40.0%]
+({K, N} -> {P, R, S})d [Support = 0.0%]
+
+Bucket NP
+ Rules:
+({N, P} -> {K})b [Support = 40.0%]
+
+Bucket KNR
+ Rules:
+({K, N, R} -> {P})b [Support = 20.0%]
+
+Bucket NPR
+ Rules:
+({N, P, R} -> {K})b [Support = 20.0%]
+
+Bucket PR
+ Rules:
+({P, R} -> {K})b [Support = 40.0%]
+
+Bucket NR
+ Rules:
+({N, R} -> {K, P, S})d [Support = 0.0%]
+
+Bucket KR
+ Rules:
+({K, R} -> {N, P, S})d [Support = 0.0%]
+
+Bucket RS
+ Rules:
+({R, S} -> {K, N, P})e [Support = 20.0%]
+
+==== CAI ======
+Bucket K
+ Rules:
+{K}-(ae)>{P, R} [Support = 20.0%]
+{K}-(e)>{N, S} [Support = 20.0%]
+
+Bucket P
+ Rules:
+{P}-(de)>{N} [Support = 0.0%]
+{P}-(abd)>{K} [Support = 0.0%]
+{P}-(ad)>{R} [Support = 0.0%]
+{P}-(d)>{S} [Support = 0.0%]
+
+Bucket R
+ Rules:
+{R}-(a)>{K} [Support = 100.0%]
+{R}-(ae)>{P} [Support = 40.0%]
+{R}-(e)>{N} [Support = 40.0%]
+
+Bucket S
+ Rules:
+{S}-(abd)>{K, R} [Support = 0.0%]
+{S}-(bde)>{N} [Support = 0.0%]
+{S}-(abde)>{P} [Support = 0.0%]
+
+Bucket N
+ Rules:
+{N}-(a)>{K, R, S} [Support = 40.0%]
+{N}-(ae)>{P} [Support = 40.0%]
+
+Bucket KN
+ Rules:
+{K, N}-(bd)>{P} [Support = 0.0%]
+{K, N}-(d)>{R, S} [Support = 0.0%]
+
+Bucket NP
+ Rules:
+{N, P}-(b)>{K} [Support = 40.0%]
+
+Bucket KNR
+ Rules:
+{K, N, R}-(b)>{P} [Support = 20.0%]
+
+Bucket NPR
+ Rules:
+{N, P, R}-(b)>{K} [Support = 20.0%]
+
+Bucket PR
+ Rules:
+{P, R}-(b)>{K} [Support = 40.0%]
+
+Bucket NR
+ Rules:
+{N, R}-(d)>{K, P, S} [Support = 0.0%]
+
+Bucket KR
+ Rules:
+{K, R}-(d)>{N, P, S} [Support = 0.0%]
+
+Bucket RS
+ Rules:
+{R, S}-(e)>{K, N, P} [Support = 20.0%]

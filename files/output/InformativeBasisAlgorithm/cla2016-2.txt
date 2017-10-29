@@ -1,0 +1,211 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/bin/java -Didea.launcher.port=7533 "-Didea.launcher.bin.path=/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath "/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/tools.jar:/Users/kevin/uqo/lattice-miner/target/classes:/Users/kevin/.m2/repository/javancss/javancss/30.51/javancss-30.51.jar:/Users/kevin/.m2/repository/javancss/ccl/29.50/ccl-29.50.jar:/Users/kevin/.m2/repository/org/jdom/jdom/2.0.2/jdom-2.0.2.jar:/Users/kevin/.m2/repository/org/apache/poi/poi/3.14-beta1/poi-3.14-beta1.jar:/Users/kevin/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/Users/kevin/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar" com.intellij.rt.execution.application.AppMain fca.core.context.triadic.Ganter files/cla2016-2.json
+== Diadic decomposition  ==
+Context name : cla2016_a
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+X   X   X   X   X
+X   0   X   0   0
+X   0   X   X   X
+X   0   X   X   0
+X   X   X   X   X
+
+Biedermann Rules for context cla2016_a:
+({P} -> {R})a [Support = 100.0%]
+({R} -> {P})a [Support = 100.0%]
+({K} -> {P, R})a [Support = 80.0%]
+({S} -> {K, P, R})a [Support = 60.0%]
+({N} -> {K, P, R, S})a [Support = 40.0%]
+
+Context name : cla2016_b
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+X   X   0   X   0
+0   X   X   0   0
+X   0   X   X   0
+X   X   X   X   0
+0   0   X   0   0
+
+Biedermann Rules for context cla2016_b:
+({K} -> {P})b [Support = 60.0%]
+({P} -> {K})b [Support = 60.0%]
+({K, N} -> {P})b [Support = 40.0%]
+({N, P} -> {K})b [Support = 40.0%]
+({K, R} -> {P})b [Support = 40.0%]
+({P, R} -> {K})b [Support = 40.0%]
+({K, N, R} -> {P})b [Support = 20.0%]
+({N, P, R} -> {K})b [Support = 20.0%]
+({S} -> {K, N, P, R})b [Support = 0.0%]
+
+Context name : cla2016_d
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+0   0   X   0   0
+0   X   0   0   0
+0   0   0   0   0
+0   0   0   0   0
+0   0   0   X   0
+
+Biedermann Rules for context cla2016_d:
+({P} -> {K, N, R, S})d [Support = 0.0%]
+({S} -> {K, N, P, R})d [Support = 0.0%]
+({N, R} -> {K, P, S})d [Support = 0.0%]
+({K, N} -> {P, R, S})d [Support = 0.0%]
+({K, R} -> {N, P, S})d [Support = 0.0%]
+
+Context name : cla2016_e
+Objects : {1, 2, 3, 4, 5}
+Attributes : {K, N, P, R, S}
+X   X   0   0   0
+X   X   X   X   X
+X   X   0   0   0
+X   X   0   0   X
+X   X   X   X   0
+
+Biedermann Rules for context cla2016_e:
+({N} -> {P})e [Support = 100.0%]
+({P} -> {N})e [Support = 100.0%]
+({S} -> {N, P})e [Support = 40.0%]
+({K} -> {N, P, R})e [Support = 40.0%]
+({R} -> {K, N, P})e [Support = 40.0%]
+({K, S} -> {N, P, R})e [Support = 20.0%]
+({R, S} -> {K, N, P})e [Support = 20.0%]
+
+==== BUCKETS ======
+Bucket P
+ Rules:
+({P} -> {R})a [Support = 100.0%]
+({P} -> {K})b [Support = 60.0%]
+({P} -> {K, N, R, S})d [Support = 0.0%]
+({P} -> {N})e [Support = 100.0%]
+
+Bucket R
+ Rules:
+({R} -> {P})a [Support = 100.0%]
+({R} -> {K, N, P})e [Support = 40.0%]
+
+Bucket K
+ Rules:
+({K} -> {P, R})a [Support = 80.0%]
+({K} -> {P})b [Support = 60.0%]
+({K} -> {N, P, R})e [Support = 40.0%]
+
+Bucket S
+ Rules:
+({S} -> {K, P, R})a [Support = 60.0%]
+({S} -> {K, N, P, R})b [Support = 0.0%]
+({S} -> {K, N, P, R})d [Support = 0.0%]
+({S} -> {N, P})e [Support = 40.0%]
+
+Bucket N
+ Rules:
+({N} -> {K, P, R, S})a [Support = 40.0%]
+({N} -> {P})e [Support = 100.0%]
+
+Bucket KN
+ Rules:
+({K, N} -> {P})b [Support = 40.0%]
+({K, N} -> {P, R, S})d [Support = 0.0%]
+
+Bucket NP
+ Rules:
+({N, P} -> {K})b [Support = 40.0%]
+
+Bucket KR
+ Rules:
+({K, R} -> {P})b [Support = 40.0%]
+({K, R} -> {N, P, S})d [Support = 0.0%]
+
+Bucket PR
+ Rules:
+({P, R} -> {K})b [Support = 40.0%]
+
+Bucket KNR
+ Rules:
+({K, N, R} -> {P})b [Support = 20.0%]
+
+Bucket NPR
+ Rules:
+({N, P, R} -> {K})b [Support = 20.0%]
+
+Bucket NR
+ Rules:
+({N, R} -> {K, P, S})d [Support = 0.0%]
+
+Bucket KS
+ Rules:
+({K, S} -> {N, P, R})e [Support = 20.0%]
+
+Bucket RS
+ Rules:
+({R, S} -> {K, N, P})e [Support = 20.0%]
+
+==== CAI ======
+Bucket P
+ Rules:
+{P}-(de)>{N} [Support = 0.0%]
+{P}-(bd)>{K} [Support = 0.0%]
+{P}-(ad)>{R} [Support = 0.0%]
+{P}-(d)>{S} [Support = 0.0%]
+
+Bucket R
+ Rules:
+{R}-(ae)>{P} [Support = 40.0%]
+{R}-(e)>{K, N} [Support = 40.0%]
+
+Bucket K
+ Rules:
+{K}-(ae)>{R} [Support = 40.0%]
+{K}-(abe)>{P} [Support = 40.0%]
+{K}-(e)>{N} [Support = 40.0%]
+
+Bucket S
+ Rules:
+{S}-(abd)>{K, R} [Support = 0.0%]
+{S}-(bde)>{N} [Support = 0.0%]
+{S}-(abde)>{P} [Support = 0.0%]
+
+Bucket N
+ Rules:
+{N}-(a)>{K, R, S} [Support = 40.0%]
+{N}-(ae)>{P} [Support = 40.0%]
+
+Bucket KN
+ Rules:
+{K, N}-(bd)>{P} [Support = 0.0%]
+{K, N}-(d)>{R, S} [Support = 0.0%]
+
+Bucket NP
+ Rules:
+{N, P}-(b)>{K} [Support = 40.0%]
+
+Bucket KR
+ Rules:
+{K, R}-(bd)>{P} [Support = 0.0%]
+{K, R}-(d)>{N, S} [Support = 0.0%]
+
+Bucket PR
+ Rules:
+{P, R}-(b)>{K} [Support = 40.0%]
+
+Bucket KNR
+ Rules:
+{K, N, R}-(b)>{P} [Support = 20.0%]
+
+Bucket NPR
+ Rules:
+{N, P, R}-(b)>{K} [Support = 20.0%]
+
+Bucket NR
+ Rules:
+{N, R}-(d)>{K, P, S} [Support = 0.0%]
+
+Bucket KS
+ Rules:
+{K, S}-(e)>{N, P, R} [Support = 20.0%]
+
+Bucket RS
+ Rules:
+{R, S}-(e)>{K, N, P} [Support = 20.0%]
+
+
+Process finished with exit code 0
